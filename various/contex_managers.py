@@ -8,12 +8,15 @@ Licence,
 
 
 class MiGestor:
+    def __init__(self, name):
+        self.nombre = name
+
     def __enter__(self):
-        print - "Entra en __enter__"
+        print("Entra en __enter__")
 
     def __exit__(self, exc_type, exec_value, traceback):
         print("Entra en __exit__")
 
 
-with MiGestor() as f:
+with MiGestor(name='Mon') as f:
     print("Hola")
